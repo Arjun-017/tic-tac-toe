@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tic Tac Toe</title>
+	<style type="text/css" media="screen">
+		.grid-container{
+			background-color: black;
+			width: 620px;
+			height: 620px;
+			margin:  100px auto;	
+			display: grid;
+			grid-template-columns: 200px 200px 200px;
+			grid-template-rows: 200px 200px 200px;
+			grid-gap: 5px;			
+		}
+		.cell{
+			height: 200px;
+			width: 200px;
+			background-color: white;
+			margin: 5px;
+			font-family: sans-serif;
+			font-size: 180px;
+			text-align: center;
+		}
+		.cell:hover{
+			transform: scale(1.02);
+			transition: 300ms ease;
+		}
+	</style>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="cell" id = "cell-1" onclick = "cell(1);"></div>
+		<div class="cell" id = "cell-2" onclick = "cell(2);"></div>
+		<div class="cell" id = "cell-3" onclick = "cell(3);"></div>
+		<div class="cell" id = "cell-4" onclick = "cell(4);"></div>
+		<div class="cell" id = "cell-5" onclick = "cell(5);"></div>
+		<div class="cell" id = "cell-6" onclick = "cell(6);"></div>
+		<div class="cell" id = "cell-7" onclick = "cell(7);"></div>
+		<div class="cell" id = "cell-8" onclick = "cell(8);"></div>
+		<div class="cell" id = "cell-9" onclick = "cell(9);"></div>
+	</div>
+	<script>
+		const cell1 = document.getElementById("cell-1");
+		const cell2 = document.getElementById("cell-2");
+		const cell3 = document.getElementById("cell-3");
+		const cell4 = document.getElementById("cell-4");
+		const cell5 = document.getElementById("cell-5");
+		const cell6 = document.getElementById("cell-6");
+		const cell7 = document.getElementById("cell-7");
+		const cell8 = document.getElementById("cell-8");
+		const cell9 = document.getElementById("cell-9");
+		var counter = 0;
+		var items = ['X','O'];
+
+		function cell(n){
+
+			switch(n){
+				case 1: cell1.innerHTML = items[counter];
+				break;
+				case 2: cell2.innerHTML = items[counter];
+				break;
+				case 3: cell3.innerHTML = items[counter];
+				break;
+				case 4: cell4.innerHTML = items[counter];
+				break;
+				case 5: cell5.innerHTML = items[counter];
+				break;
+				case 6: cell6.innerHTML = items[counter];
+				break;
+				case 7: cell7.innerHTML = items[counter];
+				break;
+				case 8: cell8.innerHTML = items[counter];
+				break;
+				case 9: cell9.innerHTML = items[counter];
+				break;
+
+			}
+			if(counter == 0){
+				counter = 1;
+			}
+			else{
+				counter = 0;
+			}
+		}
+
+	</script>
+</body>
+</html>
